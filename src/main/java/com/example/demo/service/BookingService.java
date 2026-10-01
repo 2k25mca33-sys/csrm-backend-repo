@@ -68,7 +68,7 @@ public class BookingService {
         booking.setResource(resource);
         booking.setStartTime(request.getStartTime());
         booking.setEndTime(request.getEndTime());
-        booking.setStatus(Booking.BookingStatus.PENDING);
+        booking.setStatus(Booking.BookingStatus.UPCOMING);
 
         Booking saved = bookingRepository.save(booking);
         return mapToDto(saved);
